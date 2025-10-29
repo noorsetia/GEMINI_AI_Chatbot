@@ -30,7 +30,12 @@ router.post("/", async (req, res) => {
 
 
     const result = await model.generateContent(
-      `Give a short, clear, and direct answer to this question: ${message}`
+      `Give a short, clear, and direct answer to this question: ${message}`, 
+      `You're an empathetic and friendly AI assistant. 
+        When replying, be clear, practical, and helpful. 
+        Use a conversational tone so users feel engaged. 
+        Keep answers concise but offer value. 
+        Now respond to this: ${message}`
     );
 
     // Extract response text
